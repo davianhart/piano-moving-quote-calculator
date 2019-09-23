@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Piano Moving Quote Calculator</title>
+    <link rel='stylesheet' type="text/css" href='style.css'>
+  </head>
+  <body>
+    <div>
+    <h1>Piano Moving Quote Calculator</h1>
+      <div id="inputs">
+          <h3>What kind of piano?</h3>
+          <select name="pianos" id="piano-type">
+            <option value="upright-under-43">Upright below 43"</option>
+            <option value="upright-over-43">Upright over 43"</option>
+            <option value="grand-6-6">Grand up to 6'6</option>
+            <option value="grand-over-6-6">Grand over 6'6</option>
+          </select>
+    <div>
+    <h3>Input Pickup and Destination Addresses</h3>
+        <input id='origin-field' placeholder='Type Pickup Address'/>
+          <input id='destination-field' placeholder='Type Destination Address'/>
+          <br>
+    </div>
+          
+          <h3>How Many Steps?</h3>
+          <input id='steps' type="number" placeholder='Steps' name="quantity" min="1" max="10">
+        <button id='init-map'>Click Here to Calculate</button>
+    </div>
+    <h3>Results</h3>
+      <div id="output"></div>
+        <p id='quote'></p>
+    </div>
+    <div id="map"></div>
+    <script src='app.js'></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY-&libraries=places">
+    </script>
+  </body>
+</html>

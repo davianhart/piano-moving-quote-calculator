@@ -1,0 +1,28 @@
+  if (distanceFromWaterloo < 30 && distanceFromPickup < 10 && steps < 3) {
+                    outputDiv.insertAdjacentHTML('afterend', `This move will cost ${basePrice}`);
+                    console.log('distanceFromWaterloo < 30 && distanceFromPickup < 10 && steps < 3');
+                    
+                } else if (distanceFromWaterloo < 30 && distanceFromPickup < 10 && steps < 3) {
+                    outputDiv.insertAdjacentHTML('afterend', `This move will cost ${basePrice + ((steps-3) * 10)} dollars.`);
+                    console.log('distanceFromWaterloo < 30 && distanceFromPickup < 10 && steps < 3');
+                    
+                } else if (distanceFromWaterloo < 30 && distanceFromPickup > 10 && steps < 3) {
+                    outputDiv.insertAdjacentHTML('afterend', `This move will cost ${basePrice + ((distanceFromPickup * 2) * 1.75)} dollars.`);
+                    console.log('distanceFromWaterloo < 30 && distanceFromPickup > 10 && steps < 3');
+                    
+                } else if (distanceFromWaterloo < 30 && distanceFromPickup > 10 && steps > 3) {
+                    outputDiv.insertAdjacentHTML('afterend', `This move will cost ${basePrice + (((distanceFromPickup) * 2) * 1.75) + ((steps-3) * 10)} dollars.`);
+                    console.log('distanceFromWaterloo < 30 && distanceFromPickup > 10 && steps > 3');
+                    
+                } else if (distanceFromWaterloo > 30 && steps < 3) {
+		            outputDiv.insertAdjacentHTML('afterend', `This move will cost ${basePrice + (((distanceFromWaterloo + distanceFromPickup) * 2) * 1.75)} dollars.`);
+                    console.log('distanceFromWaterloo > 30 && distanceFromPickup > 10 && steps < 3');
+                    
+		        } else if (distanceFromWaterloo > 30 && steps > 3) {
+		            outputDiv.insertAdjacentHTML('afterend', `This move will cost ${basePrice + (((distanceFromWaterloo + distanceFromPickup) * 2) * 1.75) + ((steps-3) * 10)} dollars.`);
+                    console.log('distanceFromWaterloo > 30 && distanceFromPickup > 10 && steps > 3');
+		        
+                } else {
+                    outputDiv.insertAdjacentHTML('afterend', `I'm sorry, there's been a technical error. Please try again.`);
+                }
+                

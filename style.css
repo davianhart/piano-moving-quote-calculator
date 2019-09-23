@@ -1,0 +1,59 @@
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+      }
+
+#map {
+        margin: auto auto;
+        height: 50%;
+        width: 75%;
+      }
+
+#output {
+        font-size: 11px;
+      }
+
+#origin-field {
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+
+#destination-field {
+   padding: 5px 5px;
+   margin: 5px 5px;
+}
+
+#piano-type {
+    padding: 5px 5px;
+    
+}
+
+#inputs {
+    text-align: center;
+}
+
+h3 {
+    margin: 15px;
+    text-align: center;
+}
+
+#output {
+    text-align: center;
+}
+
+#quote {
+    font-size: 22px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+team-image {
+    border: 4px;
+    border-color: green;
+}
+
+
