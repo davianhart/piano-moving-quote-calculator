@@ -95,7 +95,7 @@ function initMap() {
                 console.log(distanceFromPickup);
                 var quoteText = document.getElementById('quote');
               
-                if (distanceFromWaterloo < 30000 && distanceFromPickup < 10000 && steps < 3) {
+                if (distanceFromWaterloo < 30000 && distanceFromPickup < 10000 && steps <= 3) {
                     var quotePrice = basePrice;
                     quoteText.textContent = `This move will most likely cost $${quotePrice}.`;
                     console.log('distanceFromWaterloo < 30 && distanceFromPickup < 10 && steps < 3');
@@ -105,7 +105,7 @@ function initMap() {
                     quoteText = `This move will most likely cost $${quotePrice.toFixed(2)}.`;
                     console.log('distanceFromWaterloo < 30 && distanceFromPickup < 10 && steps > 3');
                     
-                } else if (distanceFromWaterloo < 30000 && distanceFromPickup > 10000 && steps < 3) {
+                } else if (distanceFromWaterloo < 30000 && distanceFromPickup > 10000 && steps <= 3) {
                     var quotePrice = (basePrice + ((distanceFromPickup * 2) * 0.00175));
                     quoteText.textContent = `This move will most likely cost $${quotePrice.toFixed(2)}.`;
                     console.log('distanceFromWaterloo < 30 && distanceFromPickup > 10 && steps < 3');
@@ -115,12 +115,12 @@ function initMap() {
                     quoteText.textContent = `This move will most likely cost $${quotePrice.toFixed(2)}.`;
                     console.log('distanceFromWaterloo < 30 && distanceFromPickup > 10 && steps > 3');
                     
-                } else if (distanceFromWaterloo > 30000 && distanceFromPickup < 10000 && steps < 3) {
+                } else if (distanceFromWaterloo > 30000 && distanceFromPickup < 10000 && steps <= 3) {
                     var quotePrice = basePrice + ((((distanceFromWaterloo + distanceFromPickup) * 2) * 0.00175));
 		            quoteText.textContent = `This move will most likely cost $${quotePrice.toFixed(2)}.`;
                     console.log('distanceFromWaterloo > 30 && distanceFromPickup > 10 && steps < 3');
                     
-                } else if (distanceFromWaterloo > 30000 && distanceFromPickup > 10000 && steps < 3) {
+                } else if (distanceFromWaterloo > 30000 && distanceFromPickup > 10000 && steps <= 3) {
                     var quotePrice = (basePrice + ((((distanceFromWaterloo + distanceFromPickup) * 2) * 0.00175)))
                     quoteText.textContent = `This move will most likely cost $${quotePrice.toFixed(2)}.`
                     console.log((distanceFromWaterloo > 30000 && distanceFromPickup > 10000 && steps < 3))
